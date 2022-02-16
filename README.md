@@ -1,20 +1,24 @@
 # Form PDF Finisher / form_pdf
-[![Packagist](https://img.shields.io/packagist/v/t3brightside/form_pdf.svg?style=flat)](https://packagist.org/packages/t3brightside/form_pdf)
+[![Packagist](https://img.shields.io/packagist/v/t3brightside/form-pdf.svg?style=flat)](https://packagist.org/packages/t3brightside/form-pdf)
 [![Software License](https://img.shields.io/badge/license-GPLv3-brightgreen.svg?style=flat)](LICENSE)
 [![Brightside](https://img.shields.io/badge/by-t3brightside.com-orange.svg?style=flat)](https://t3brightside.com)
 
-**TYPO3 form finisher to write form data into pre-existing PDF file.**
+**TYPO3 form finisher to write form data into pre-defined PDF file.**
 - Sends PDF as an attachment in user and receiver e-mails
 - Provides link to the PDF file in the confirmation message & deletes file after clicking the link
 - Adds scheduler task to remove the file after certain amount of time if link is not clicked     
 
 ## Installation
 
-Install with composer
+Install with composer (recommended)
 ```bash
 composer require t3brightside/form-pdf
 ```
-Or find **form_pdf** in TER.
+- **v1.1.2** is composer only
+- **v1.1.1** is available in TER but mPDF fonts have been removed from Resources/Private/PHP/mpdf/mpdf/ttfonts/
+find the fonts here: https://github.com/t3brightside/form_pdf/tree/1.1.1/Resources/Private/PHP/mpdf/mpdf/ttfonts
+or grab the package and install it manually: https://github.com/t3brightside/form_pdf/tree/1.1.1
+
 ### How it works
 
 The PDF file is generated using [mPDF PHP library](https://mpdf.github.io/).
@@ -37,10 +41,12 @@ This example related to default contact form.
 1. Include static record "Form PDF" to TS template.
 
 2. Prepare 2 records: PDF Template, HTML templates.
-   ![new record](./Documentation/images/new_record.png)
 
-3. Add PDF Finisher at the first position in the form.  
-   ![finisher](./Documentation/images/finisher.png)
+  ![new record](./Documentation/images/new_record.png)
+
+3. Add PDF Finisher at the first position in the form.
+
+  ![finisher](./Documentation/images/finisher.png)
 
 4. Select already created PDF Template and HTML Template.
 
@@ -80,7 +86,7 @@ It extends core finishers
 ## Sources
 
 - [GitHub](https://github.com/t3brightside/form_pdf)
-- [Packagist](https://packagist.org/packages/t3brightside/form_pdf)
+- [Packagist](https://packagist.org/packages/t3brightside/form-pdf)
 - [TER](https://extensions.typo3.org/extension/form_pdf/)
 
 ## Author
